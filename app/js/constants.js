@@ -1,5 +1,5 @@
 const AppSettings = {
-  appTitle: 'CKLending',
+  appTitle: 'Loan Application',
   apiUrl: '/api/v1',
   webhost: 'localhost',
 	port : '8082'

@@ -3,7 +3,7 @@ function webService($http, AppSettings, $rootScope) {
 
     const service = {};
 
-    service.restContextPath = 'https://' + AppSettings.webhost + ':' + AppSettings.port + '/api/';
+    service.restContextPath = 'http://' + AppSettings.webhost + ':' + AppSettings.port + '/api/';
 
 
 

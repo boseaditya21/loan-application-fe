@@ -1,12 +1,10 @@
 import angular from 'angular';
-require('angular-cookies');
 // angular modules
+require('angular-cookies');
 import constants from './constants';
 import onConfig  from './on_config';
 import onRun     from './on_run';
 import 'angular-ui-router';
-import 'angular-material';
-import 'angular-messages';
 import './templates';
 import './filters';
 import './controllers';
@@ -17,8 +15,6 @@ import './directives';
 const requires = [
   'ui.router',
   'ngCookies',
-  'ngMaterial',
-  'ngMessages',
   'templates',
   'app.filters',
   'app.controllers',
