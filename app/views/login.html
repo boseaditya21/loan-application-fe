@@ -1,0 +1,25 @@
+<div class="container">
+  <form name="loginForm" class="form-signin">
+    <h1 class="form-signin-heading">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="login.loginForm.email" ng-pattern="/^[A-Z0-9a-z._%+-]+@[A-Za-z]+\.[A-Za-z]{2,3}$/" required>
+    <div ng-messages="loginform.email.$error">
+      <p class="error" ng-show="loginform.email.$touched && loginform.email.$pristine && loginform.password.$invalid" ng-message="required">Your email is required.</p>
+      <p class="error" ng-show="loginform.email.$touched && loginform.email.$invalid" ng-message="pattern">This needs to be a valid email</p>
+    </div>
+    <br>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="login.loginForm.password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me" ng-model="login.loginform.rememberMe"> Remember me
+      </label>
+    </div>
+    <div>
+      <label>
+        <a href="" class="forgotPassword" ui-sref="forgotPasswordEmail">Forgot Password</a> <a class="registerWithUs" href="" ui-sref="Register">Register with Us</a>
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login.doLogin()" ng-disabled="login.disableLogin()">Login</button>
+  </form>
+</div>

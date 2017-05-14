@@ -1,21 +1,23 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right" style="margin-top:15px">
-            <li role="presentation"><a href="home.php">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-            <li role="presentation"><a href="login.php">Login</a></li>
-            <li role="presentation"><a href="register.php">Register</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Loan Application</h3>
-      </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" ui-sref="Home">Online Loan Application</a>
     </div>
-  </body>
-</html>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" ui-sref="Home">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" ui-sref="Login">Login</a></li>
+        <li><a href="#" ui-sref="Register">Register</a></li>
+        <li><a href="#" ng-show="accessToken" ng-click="mainCtrl.logOut()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

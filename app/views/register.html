@@ -1,0 +1,83 @@
+<div class="container">
+    <h1 class="well">Registration Form</h1>
+    <div class="col-lg-12 well">
+        <div class="row">
+            <form name="registerForm">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="First Name" class="form-control" name="firstName" ng-model="register.registerForm.fname" required>
+                            <div ng-messages="registerForm.firstName.$error">
+                                <p class="error" ng-show="registerForm.firstName.$touched && registerForm.firstName.$pristine" ng-message="required">First Name is required.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Last Name" class="form-control" name="lastName" ng-model="register.registerForm.lname" required>
+                            <div ng-messages="registerForm.lastName.$error">
+                                <p class="error" ng-show="registerForm.lastName.$touched && registerForm.lastName.$pristine" ng-message="required">Last Name is required.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea placeholder="Address" rows="3" class="form-control" ng-model="register.registerForm.address" name="address" required></textarea>
+                        <div ng-messages="registerForm.address.$error">
+                            <p class="error" ng-show="registerForm.address.$touched && registerForm.address.$pristine" ng-message="required">Address is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" placeholder="Mobile Number" rows="3" class="form-control" ng-model="register.registerForm.number" name="number" ng-pattern="/^[0-9]*$/" ng-minlength="10" required></textarea>
+                        <div ng-messages="registerForm.number.$error">
+                            <p class="error" ng-show="registerForm.number.$touched && registerForm.number.$pristine" ng-message="required">Mobile Number is required.</p>
+                            <p class="error" ng-show="registerForm.number.$touched && registerForm.number.$pristine" ng-message="pattern">Mobile Number should be in numbers only.</p>
+                            <p class="error" ng-show="registerForm.number.$touched && registerForm.number.$pristine" ng-message="minlength">Mobile Number should be of 10 digits.</p>
+                        </div>
+                    </div>      
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Email Address" class="form-control" ng-model="register.registerForm.email" ng-pattern="/^[A-Z0-9a-z._%+-]+@[A-Za-z]+\.[A-Za-z]{2,3}$/" name="email" required>
+                        <div ng-messages="registerForm.email.$error">
+                            <p class="error" ng-show="registerForm.email.$touched && registerForm.email.$pristine" ng-message="required">Your Email is required.</p>
+                            <p class="error" ng-show="registerForm.email.$touched && registerForm.email.$invalid" ng-message="pattern" ng-message="pattern">This needs to be a valid email</p>
+                        </div>
+                    </div>  
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Password" class="form-control" name="password" ng-model="register.registerForm.password" required>
+                            <div ng-messages="registerForm.password.$error">
+                                <p class="error" ng-show="registerForm.password.$touched && registerForm.password.$pristine" ng-message="required">Password is required.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="Confirm Password" class="form-control" name="confirmPassword" ng-model="register.registerForm.confirmPassword" required>
+                            <div ng-messages="registerForm.confirmPassword.$error">
+                                <p class="error" ng-show="registerForm.confirmPassword.$touched &&  registerForm.confirmPassword.$pristine" ng-message="required">Password is required.</p>
+                                <p class="error" ng-show="register.registerForm.password!=register.registerForm.confirmPassword">Password does not match.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Security Question</label>
+                        <textarea placeholder="Security Question" rows="3" class="form-control" ng-model="register.registerForm.securityQuestion" name="securityQuestion" required></textarea>
+                        <div ng-messages="registerForm.securityQuestion.$error">
+                            <p class="error" ng-show="registerForm.securityQuestion.$touched && registerForm.securityQuestion.$pristine" ng-message="required">Security Question is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Security Answer</label>
+                        <textarea placeholder="Security Answer" rows="3" class="form-control" ng-model="register.registerForm.securityAnswer" name="securityAnswer" required></textarea>
+                        <div ng-messages="registerForm.securityAnswer.$error">
+                            <p class="error" ng-show="registerForm.securityAnswer.$touched && registerForm.securityAnswer.$pristine" ng-message="required">Security Answer is required.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-lg btn-primary" ng-click="register.submit()" ng-disabled="register.disable()">Submit</button>
+                </div>
+            </form> 
+        </div>
+    </div>
+</div>

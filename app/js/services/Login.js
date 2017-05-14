@@ -26,11 +26,11 @@ function LoginService(webService, $q, $rootScope) {
 
   service.userLogin = function(param) {
     var deferObject;
-    var promise = webService.post('authenticate', param);
+    var promise = webService.post('loginUser', param);
     deferObject = deferObject || $q.defer();
     promise.then(
       function(response) {
-        console.log(response);
+        //console.log(response);
         if (response && response.data.success) {
           $rootScope.accessToken = response.data.token;
           deferObject.resolve(response);

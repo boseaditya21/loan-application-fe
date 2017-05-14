@@ -1,4 +1,4 @@
-function HomeCtrl() {
+function registerCtrl() {
 	'ngInject'
 	
   // ViewModel
@@ -6,6 +6,6 @@ function HomeCtrl() {
   }
 
 export default {
-  name: 'HomeCtrl',
-  fn: HomeCtrl
+  name: 'registerCtrl',
+  fn: registerCtrl
 };
