@@ -7,14 +7,14 @@
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <label>First Name</label>
-                            <input type="text" placeholder="First Name" class="form-control" name="firstName" ng-model="register.registerForm.fname" required>
+                            <input type="text" placeholder="First Name" class="form-control" name="firstName" ng-model="register.registerForm.firstName" required>
                             <div ng-messages="registerForm.firstName.$error">
                                 <p class="error" ng-show="registerForm.firstName.$touched && registerForm.firstName.$pristine" ng-message="required">First Name is required.</p>
                             </div>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label>Last Name</label>
-                            <input type="text" placeholder="Last Name" class="form-control" name="lastName" ng-model="register.registerForm.lname" required>
+                            <input type="text" placeholder="Last Name" class="form-control" name="lastName" ng-model="register.registerForm.lastName" required>
                             <div ng-messages="registerForm.lastName.$error">
                                 <p class="error" ng-show="registerForm.lastName.$touched && registerForm.lastName.$pristine" ng-message="required">Last Name is required.</p>
                             </div>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label>Mobile Number</label>
-                        <input type="text" placeholder="Mobile Number" rows="3" class="form-control" ng-model="register.registerForm.number" name="number" ng-pattern="/^[0-9]*$/" ng-minlength="10" required></textarea>
+                        <input type="text" placeholder="Mobile Number" rows="3" class="form-control" ng-model="register.registerForm.phone" name="number" ng-pattern="/^[0-9]*$/" ng-minlength="10" required></textarea>
                         <div ng-messages="registerForm.number.$error">
                             <p class="error" ng-show="registerForm.number.$touched && registerForm.number.$pristine" ng-message="required">Mobile Number is required.</p>
                             <p class="error" ng-show="registerForm.number.$touched && registerForm.number.$pristine" ng-message="pattern">Mobile Number should be in numbers only.</p>

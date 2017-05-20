@@ -10,6 +10,7 @@ function webService($http, AppSettings, $rootScope) {
     service.post = function(url, param) {
         console.log('Webservice calling');
         var parameter = JSON.stringify(param);
+        //console.log(parameter);
         if ($rootScope.accessToken) {
             var promise = $http({
                 method: 'post',
@@ -25,11 +26,11 @@ function webService($http, AppSettings, $rootScope) {
             });
             return promise;
         } else {
+            //console.log(param);
             var promise = $http({
                 method: 'post',
                 url: service.restContextPath + url,
                 data: param
-
             });
             return promise;
         }

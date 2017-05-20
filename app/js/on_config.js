@@ -28,6 +28,27 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
     controller:'registerCtrl as register',
     templateUrl:'register.html',
     title:'Register'
+  })
+  
+  .state('forgotPassword',{
+    url:'/forgotPassword',
+    controller:'forgotPasswordCtrl as forgotPassword',
+    templateUrl:'forgotPassword.html',
+    title:'Forgot Password'
+  })
+
+  .state('dashboard',{
+    url:'/dashboard',
+    controller:'dashboardCtrl as dashboard',
+    templateUrl:'dashboard.html',
+    title:'Dashboard'
+  })
+
+  .state('profile',{
+    url:'/profile',
+    controller:'profileCtrl as profile',
+    templateUrl:'profile.html',
+    title:'Profile'
   });
 
   $urlRouterProvider.otherwise('/');
