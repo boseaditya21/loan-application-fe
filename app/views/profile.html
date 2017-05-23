@@ -1,0 +1,52 @@
+<div style="padding-right: 35px;">
+    <div class="row">
+        <span class="col-sm-6">
+            <h1 style="text-align: left;">Personal Details</h1>
+        </span>
+        <span class="col-md-6">
+            <button type="button" class="btn btn-primary" ui-sref="updatePersonalDetails" style="margin-top:20px">Update</button>
+        </span>
+    </div>  
+    <div>
+        <div class="col-sm-12" style="margin-top:16px;margin-left:-2px;">
+            <br>
+            <div class="row">
+                <label class=" col-md-1">
+                    <span style="color:#989296">Name </span>
+                </label>
+                <label class=" col-md-10">
+                    <span style="color:#655e63">{{profile.form.firstName}} {{profile.form.lastName}}</span>
+                </label>
+            </div>
+            <br>
+            <div class="row">
+                <label class=" col-md-1">
+                    <span style="color:#989296">Address </span>
+                </label>
+                <label class=" col-md-10">
+                    <span style="color:#655e63"> {{profile.form.address}} </span>
+                </label>
+            </div>
+            <br>
+            <div class="row">
+                <label class=" col-md-1"><span style="color:#989296">Email Address </span></label>
+                <label class=" col-md-10"><span style="color:#655e63">{{profile.form.email}}</span></label>
+            </div>
+            <br>
+            <div class="row">
+                <label class=" col-md-1"><span style="color:#989296">Mobile Number </span></label>
+                <label class=" col-md-10"><span style="color:#655e63">{{profile.form.phone}}</span></label>
+            </div>
+            <br>
+            <div class="row">
+                <label class=" col-md-1"><span style="color:#989296">Gender</span></label>
+                <label class=" col-md-10"><span style="color:#655e63">{{profile.form.gender}}</span></label>
+            </div>
+            <br>
+            <div class="row">
+                <label class=" col-md-2"><span style="color:#989296">Date of Birth</span></label>
+                <label class=" col-md-10"><span style="color:#655e63">{{profile.form.dob}}</span></label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,7 +11,12 @@ function RootCtrl(LoginService,$cookies, $rootScope, $state,sharedValues) {
     },
     function(reason){
       console.log('Failed',reason);
-    })
+    });
+    $rootScope.accessToken=$cookies.get('token');
+    if($rootScope.accessToken!='')
+      $state.go('dashboard');
+    else
+      $state.go('Home');
   }
 
   vm.logOut = function() {

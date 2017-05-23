@@ -49,6 +49,13 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
     controller:'profileCtrl as profile',
     templateUrl:'profile.html',
     title:'Profile'
+  })
+
+  .state('updatePersonalDetails',{
+    url:'/updatePersonalDetails',
+    controller:'updatePersonalDetailsCtrl as updatePersonalDetails',
+    templateUrl:'updatePersonalDetails.html',
+    title:'Update Personal Details'
   });
 
   $urlRouterProvider.otherwise('/');

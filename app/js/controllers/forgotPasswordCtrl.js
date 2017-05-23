@@ -1,4 +1,4 @@
-function forgotPasswordCtrl(forgotPasswordService) {
+function forgotPasswordCtrl(forgotPasswordService,$state) {
 	'ngInject'
 	
   // ViewModel
@@ -41,6 +41,7 @@ function forgotPasswordCtrl(forgotPasswordService) {
   		console.log(answer);
         if(answer.status==200 && answer.data.success==true){
           console.log(answer);
+          $state.go('Login');
       }
       },
       function(reason) {

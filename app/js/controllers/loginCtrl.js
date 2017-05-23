@@ -5,21 +5,23 @@ function loginCtrl(LoginService, $state, $rootScope, $cookies,sharedValues) {
   vm.loginForm = {
     password: '',
     email: '',
-    rememberMe:''
+    rememberMe:false
   }
   vm.doLogin = function() {
+    console.log(vm.loginForm);
       var promise = LoginService.userLogin(vm.loginForm);
       promise.then(function(answer) {
         if(answer.status==200 && answer.data.success==true){
           console.log(answer);
             sharedValues.email=vm.loginForm.email;
-            console.log(sharedValues.accId);
+            console.log(sharedValues.email);
             $rootScope.accessToken=answer.data.token;
+            console.log($rootScope.accessToken);
             if(vm.loginForm.rememberMe==true)
             {
               $cookies.put('token', $rootScope.accessToken);
             }
-            $state.go('Profile');
+            $state.go('dashboard');
           }
       },
       function(reason) {
