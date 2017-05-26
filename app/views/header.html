@@ -15,7 +15,8 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#" ng-show="!accessToken" ui-sref="Login">Login</a></li>
-        <li><a href="#" ng-show="!accessToken"ui-sref="Register">Register</a></li>
+        <li><a href="#" ng-show="!accessToken" ui-sref="Register">Register</a></li>
+        <li><a href="#" ng-show="accessToken" ui-sref="profile">Profile</a></li>
         <li><a href="#" ng-show="accessToken" ng-click="mainCtrl.logOut()">Logout</a></li>
       </ul>
     </div>

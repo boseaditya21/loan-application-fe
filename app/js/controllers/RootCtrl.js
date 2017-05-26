@@ -13,15 +13,18 @@ function RootCtrl(LoginService,$cookies, $rootScope, $state,sharedValues) {
       console.log('Failed',reason);
     });
     $rootScope.accessToken=$cookies.get('token');
-    if($rootScope.accessToken!='')
-      $state.go('dashboard');
-    else
+    console.log($rootScope.accessToken);
+    if($rootScope.accessToken==null){
       $state.go('Home');
+    }
+    else{
+      $state.go('dashboard');
+    }
   }
 
   vm.logOut = function() {
     $rootScope.accessToken = null;
-    $cookies.remove('accountID');
+    //$cookies.remove('accountID');
     $cookies.remove('token');
     $state.go('Home');
   }

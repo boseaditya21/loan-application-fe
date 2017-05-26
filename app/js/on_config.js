@@ -56,7 +56,14 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
     controller:'updatePersonalDetailsCtrl as updatePersonalDetails',
     templateUrl:'updatePersonalDetails.html',
     title:'Update Personal Details'
-  });
+  })
+
+  .state('applicationForm1',{
+    url:'/applicationForm1',
+    controller:'applicationForm1Ctrl as applicationForm1',
+    templateUrl:'applicationForm1.html',
+    title:'Application Form'
+  });  
 
   $urlRouterProvider.otherwise('/');
 

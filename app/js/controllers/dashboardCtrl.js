@@ -13,6 +13,7 @@ function dashboardCtrl(sharedValues,dashboardService) {
       console.log(answer);
       if(answer.data=='Empty')
         vm.flag=true;
+      console.log(vm.flag);
       },
       function(reason) {
         var err = reason;
