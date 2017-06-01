@@ -1,13 +1,13 @@
-function applicationForm1Ctrl(profileService,sharedValues,applicationForm1Service) {
+function applicationForm1Ctrl(profileService,sharedValues,$state) {
 	'ngInject'
 	
   // ViewModel
   const vm = this;
   vm.form={
-  	id:'',
-  	firstName:'',
-  	lastName:'',
-  	email:'',
+  id:'',
+  firstName:'',
+  lastName:'',
+  email:'',
 	gender:'',
 	dob:'',
 	address:'',
@@ -36,6 +36,7 @@ function applicationForm1Ctrl(profileService,sharedValues,applicationForm1Servic
     	vm.form.gender=answer.data.details.gender;
     	vm.form.dob=answer.data.details.dob;
     	vm.form.panCardNumber=answer.data.details.panCardNumber;
+      vm.form.address=answer.data.details.address;
       	console.log(vm.form);
       	sharedValues.form1=vm.form;
     },
@@ -46,10 +47,10 @@ function applicationForm1Ctrl(profileService,sharedValues,applicationForm1Servic
     return promise;
   }
 
-  vm.continue=function()
+  /*vm.continue=function()
   {
   	var promise=applicationForm1Service.continue(vm.form);
-	promise.then(function(answer) {
+	 promise.then(function(answer) {
     	console.log(answer);
     	vm.form.firstName=answer.data.details.firstName;
     	vm.form.lastName=answer.data.details.lastName;
@@ -64,6 +65,12 @@ function applicationForm1Ctrl(profileService,sharedValues,applicationForm1Servic
         console.log(err);
     });
     return promise;  	
+  }*/
+
+  vm.continue=function()
+  {
+    console.log(sharedValues.form1);
+    $state.go('applicationForm2');
   }
 
   vm.init();

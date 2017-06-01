@@ -1,0 +1,40 @@
+<div class="container">
+    <form>
+    <h1>Income Details</h1>
+    <br>
+    <div class="form-group">
+      <label>Employment Status</label>
+      <select class="form-control" id="sel1" ng-model="applicationForm4.form.employmentStatus">
+        <option value="Intern/Trainee">Intern/Trainee</option>
+        <option value="Permanent">Permanent</option>
+      </select>
+    </div>
+  	<br>
+    <div class="form-group">
+      <label>Net Income</label>
+      <input type="text" class="form-control" id="address" placeholder="Net Income" ng-model="applicationForm4.form.netIncome">
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Frequency Of Income</label>
+      <select class="form-control" id="sel1" ng-model="applicationForm4.form.frequencyOfIncome">
+        <option value="Weekly">Weekly</option>
+        <option value="Fortnightly">Fortnightly</option>
+        <option value="Monthly">Monthly</option>
+        <option value="Yearly">Yearly</option>
+      </select>
+    </div>   
+    <br>
+    <div class="form-group">
+      <label>Next Payment Date</label>
+      <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Next Payment Date" ng-model="applicationForm4.form.nextPaymentDate">
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Occupation</label>
+      <input type="text" class="form-control" id="exampleInputDOB1" placeholder="Occupation" ng-model="applicationForm4.form.occupation">
+    </div>
+    <br>
+    <button class="btn btn-lg btn-primary" ng-click="applicationForm4.continue()">Submit</button>
+  </form>
+</div> 

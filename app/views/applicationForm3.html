@@ -1,0 +1,38 @@
+<div class="container">
+    <form>
+    <h1>Loan Details</h1>
+    <br>
+    <div class="form-group">
+      <label>Loan Purpose</label>
+      <input type="text" class="form-control" id="exampleInputDOB1" placeholder="Loan Purpose" ng-model="applicationForm3.form.loanPurpose">
+    </div>
+  	<br>
+    <div class="form-group">
+      <label>Payment Frequecy</label>
+      <div class="radio">
+        <label><input type="radio" name="optradio" ng-model="applicationForm3.form.paymentFrequency" value="Weekly">Weekly</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio" ng-model="applicationForm3.form.paymentFrequency" value="Fortnightly">Fortnightly</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio" ng-model="applicationForm3.form.paymentFrequency" value="Yearly">Yearly</label>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Lease Term</label>
+      <div class="radio">
+        <label><input type="radio" name="optradio" ng-model="applicationForm3.form.leaseTerm" value="3">3</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio" ng-model="applicationForm3.form.leaseTerm" value="4">4</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio" ng-model="applicationForm3.form.leaseTerm" value="5">5</label>
+      </div>
+    </div>   
+    <br>
+    <button class="btn btn-lg btn-primary" ng-click="applicationForm3.continue()">Continue</button>
+  </form>
+</div> 

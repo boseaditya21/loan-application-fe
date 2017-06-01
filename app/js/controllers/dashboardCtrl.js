@@ -4,6 +4,9 @@ function dashboardCtrl(sharedValues,dashboardService) {
   // ViewModel
   const vm = this;
   vm.flag=false;
+  vm.id='';
+  vm.purpose='';
+  vm.status='';
 
   vm.init=function()
   {
@@ -11,9 +14,18 @@ function dashboardCtrl(sharedValues,dashboardService) {
   	var promise=dashboardService.dashboard(sharedValues.email)
   	promise.then(function(answer) {
       console.log(answer);
-      if(answer.data=='Empty')
+      if(answer.status==200 && answer.statusText=='OK' && answer.data!='Empty')
+      {
+        vm.id=answer.data.details.id;
+        vm.purpose=answer.data.details.loanPurpose;
+        vm.status=answer.data.details.status;
+      }
+
+      else if(answer.data=='Empty')
+      {
         vm.flag=true;
-      console.log(vm.flag);
+        console.log(vm.flag);
+      }
       },
       function(reason) {
         var err = reason;

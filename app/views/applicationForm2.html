@@ -9,30 +9,32 @@
   	<br>
     <div class="form-group">
       <label>Employment Type</label>
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-        </ul>
-      </div>
+      <select class="form-control" id="sel1" ng-model="applicationForm2.form.employmentType">
+        <option value="service">Service</option>
+        <option value="business">Business</option>
+      </select>
     </div>
     <br>
     <div class="form-group">
-      <label>Address</label>
-      <input type="text" class="form-control" id="address" placeholder="Address" ng-model="applicationForm1.form.address">
+      <label>Number of Financial Dependents</label>
+      <select class="form-control" id="sel1" ng-model="applicationForm2.form.numberOfFinancialDependents">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
     </div>    
     <br>
+    <h1>Address Information</h1>
 		<div class="form-group">
-      <label>Pan Card Number</label>
-      <input type="number" class="form-control" id="panCardNumber" placeholder="Pan Card Number" ng-model="applicationForm1.form.panCardNumber">
+      <label>Type of Residence</label>
+      <input type="text" class="form-control" id="typeOfResidence" placeholder="Eg.. Rent/Permanent" ng-model="applicationForm2.form.typeOfResidence">
     </div>
     <br>
-    <button class="btn btn-lg btn-primary">Continue</button>
+    <div class="form-group">
+      <label>I have lived here for: (in years)</label>
+      <input type="number" class="form-control" id="iHaveLivedHereFor" placeholder="I have Lived Here For" ng-model="applicationForm2.form.iHaveLivedHereFor">
+    </div>
+    <button class="btn btn-lg btn-primary" ng-click="applicationForm2.continue()">Continue</button>
   </form>
 </div> 

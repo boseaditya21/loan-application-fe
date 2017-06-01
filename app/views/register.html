@@ -21,6 +21,26 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio" ng-model="register.registerForm.gender" value="Male">Male
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio" ng-model="register.registerForm.gender" vlaue="Female">Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth" name="dob" ng-model="register.registerForm.dob">
+                        <div ng-messages="registerForm.firstName.$error">
+                            <p class="error" ng-show="registerForm.dob.$touched && registerForm.dob.$pristine" ng-message="required">Date Of Birth is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label>Address</label>
                         <textarea placeholder="Address" rows="3" class="form-control" ng-model="register.registerForm.address" name="address" required></textarea>
                         <div ng-messages="registerForm.address.$error">

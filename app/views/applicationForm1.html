@@ -4,10 +4,10 @@
     <br>
     <label>Gender:</label>
  		<div class="radio">
-      <label><input type="radio" name="optradio" ng-model="applicationForm1.form.gender">Male</label>
+      <label><input type="radio" name="optradio" ng-model="applicationForm1.form.gender" value="Male">Male</label>
     </div>
     <div class="radio">
-      <label><input type="radio" name="optradio" ng-model="applicationForm1.form.gender">Female</label>
+      <label><input type="radio" name="optradio" ng-model="applicationForm1.form.gender" vlaue="Female">Female</label>
     </div>
   	<br>
     <div class="form-group">
@@ -22,9 +22,9 @@
     <br>
 		<div class="form-group">
       <label>Pan Card Number</label>
-      <input type="number" class="form-control" id="panCardNumber" placeholder="Pan Card Number" ng-model="applicationForm1.form.panCardNumber">
+      <input type="text" class="form-control" id="panCardNumber" placeholder="Pan Card Number" ng-model="applicationForm1.form.panCardNumber">
     </div>
     <br>
-    <button class="btn btn-lg btn-primary">Continue</button>
+    <button class="btn btn-lg btn-primary" ng-click="applicationForm1.continue()">Continue</button>
   </form>
 </div> 

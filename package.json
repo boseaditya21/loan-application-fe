@@ -32,6 +32,7 @@
     "unit": "cross-env NODE_ENV=test ./node_modules/.bin/gulp unit"
   },
   "dependencies": {
+    "bootstrap-slider": "^9.8.0",
     "cross-env": "^1.0.8"
   },
   "devDependencies": {

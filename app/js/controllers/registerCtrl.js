@@ -13,7 +13,9 @@ function registerCtrl(registerService,$state) {
   	password:'',
   	confirmPassword:'',
   	securityQuestion:'',
-  	securityAnswer:''
+  	securityAnswer:'',
+    gender:'',
+    dob:''
   }
 
   vm.submit=function()
@@ -24,7 +26,8 @@ function registerCtrl(registerService,$state) {
       console.log(answer);
         if(answer.data='Registered Successfully'){
           console.log(answer);
-            $state.go('Login')
+          alert('Successfully Registered');
+            $state.go('Login');
           }
       },
       function(reason) {

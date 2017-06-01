@@ -5,6 +5,7 @@ function RootCtrl(LoginService,$cookies, $rootScope, $state,sharedValues) {
   vm.status='';
 
   vm.init = function() {
+    console.log(sharedValues.email);
     var login = LoginService.apiLogin();
     login.then(function(answer){
     console.log('Success',answer);

@@ -63,7 +63,35 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
     controller:'applicationForm1Ctrl as applicationForm1',
     templateUrl:'applicationForm1.html',
     title:'Application Form'
-  });  
+  })
+
+  .state('applicationForm2',{
+    url:'/applicationForm2',
+    controller:'applicationForm2Ctrl as applicationForm2',
+    templateUrl:'applicationForm2.html',
+    title:'Application Form'
+  })
+
+  .state('applicationForm3',{
+    url:'/applicationForm3',
+    controller:'applicationForm3Ctrl as applicationForm3',
+    templateUrl:'applicationForm3.html',
+    title:'Application Form'
+  })
+
+  .state('applicationForm4',{
+    url:'/applicationForm4',
+    controller:'applicationForm4Ctrl as applicationForm4',
+    templateUrl:'applicationForm4.html',
+    title:'Application Form'
+  })
+
+  .state('congratulations',{
+    url:'/congratulations',
+    controller:'congratulationsCtrl as congratulations',
+    templateUrl:'congratulations.html',
+    title:'congratulations'
+  });
 
   $urlRouterProvider.otherwise('/');
 
